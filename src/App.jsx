@@ -1,25 +1,33 @@
 import './styles/App.scss'
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
+import HomePage from './Accueil';
+import About from './apropos';
+import PropTypes from 'prop-types';
 
 
 function App() {
   return (
-    <>
-      <div>
-      <nav>
-        <Link to="/">Accueil</Link>
-        <Link to="/">A propos</Link>
-      </nav>
-
-      <Routes>
-        <Route path="/" element={<h1>Accueil</h1>} />
-        <Route path="/" element={<h1>A propos</h1>} />
-        <Route path="/" element={<h1>Erreur 404</h1>} />
-      </Routes>
-    </div>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout><HomePage /></Layout>} />
+      <Route path="/about" element={<Layout><About /></Layout>} /> 
+      <Route path="*" element={<h1>Erreur 404</h1>} />
+    </ Routes>
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired, // `node` signifie tout contenu JSX ou textuel
+};
+
+function Layout({ children }) {
+  return (
+    <div>
+      <header>My Header</header>
+      <main>{children}</main>
+      <footer>My Footer</footer>
+    </div>
+  );
 }
 
 export default App
