@@ -8,8 +8,8 @@ function Main() {
     return (
         <section>
             <div className="Affiche">
-                <img src={Affiche} alt="photo d'une falaise en bord de mer" />
                 <h1>Chez vous, partout et ailleurs</h1>
+                <img src={Affiche} alt="photo d'une falaise en bord de mer" />
             </div>
             <div className="gallery">
                     {data.slice(0, 6).map((item) => (
