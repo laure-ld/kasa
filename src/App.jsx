@@ -1,8 +1,10 @@
 import './styles/App.scss'
 import React from 'react';
 import { Routes, Route} from 'react-router-dom';
-import HomePage from './Accueil';
-import About from './apropos';
+import HomePage from './jsx/Accueil';
+import About from './jsx/apropos';
+import Header from './jsx/Header';
+import Main from './jsx/main';
 import PropTypes from 'prop-types';
 
 
@@ -23,9 +25,9 @@ Layout.propTypes = {
 function Layout({ children }) {
   return (
     <div>
-      <header>My Header</header>
+      <header><Header /></header>
       <main>{children}</main>
-      <footer>My Footer</footer>
+      <footer><Main /></footer>
     </div>
   );
 }
