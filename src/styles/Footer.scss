@@ -1,0 +1,9 @@
+@use 'color';
+@use 'index';
+
+footer {
+    position: absolute;
+    left: 0;
+    background-color: color.$footer-background;
+}
+
