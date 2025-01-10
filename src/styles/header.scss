@@ -1,0 +1,25 @@
+@use 'index';
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 57px;
+}
+
+nav ul li a {
+    display: inline-block;
+    margin-right: 15px;
+    text-decoration: none;
+}
