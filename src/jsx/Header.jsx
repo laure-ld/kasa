@@ -8,10 +8,10 @@ function Header() {
             <img className="logo" src={Logo} alt="Logo Kasa" />
             <nav>
                 <ul>
-                    <li key="home">
+                    <li className="home" key="home">
                         <a href="/">Accueil</a>
                     </li>
-                    <li key="home">
+                    <li className="about" key="about">
                         <a href="/">A propos</a>
                     </li>
                 </ul>

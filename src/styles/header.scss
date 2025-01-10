@@ -4,22 +4,27 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
 
-.logo {
-    width: 100px;
-    height: auto;
-}
+    .logo {
+    width: auto;
+    height: 68px;
+    object-fit: cover;
+    }   
 
-nav ul {
+    nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
     gap: 57px;
-}
-
-nav ul li a {
+    }
+    
+    nav ul li a {
     display: inline-block;
     margin-right: 15px;
     text-decoration: none;
+    }
+
+    li.home a {
+        border-bottom: 1px solid black;
+    }
 }
