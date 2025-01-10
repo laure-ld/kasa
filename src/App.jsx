@@ -6,6 +6,7 @@ import About from './jsx/apropos';
 import Header from './jsx/Header';
 import Main from './jsx/main';
 import PropTypes from 'prop-types';
+import Footer from './jsx/Footer';
 
 
 function App() {
@@ -22,12 +23,12 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired, // `node` signifie tout contenu JSX ou textuel
 };
 
-function Layout({ children }) {
+function Layout() {
   return (
     <div>
       <header><Header /></header>
-      <main>{children}</main>
-      <footer><Main /></footer>
+      <main><Main /></main>
+      <footer><Footer /></footer>
     </div>
   );
 }
