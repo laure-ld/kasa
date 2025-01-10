@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import '../styles/Main.scss';
 
 function Cards({title}) {
     return (
         <div className="cards">
-            <p className="cards-title">{title}</p>
+            <h3 className="cards-title">{title}</h3>
         </div>
     );
 }

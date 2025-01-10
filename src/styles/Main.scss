@@ -1,0 +1,25 @@
+@use 'color';
+@use 'index';
+
+.gallery {
+    background-color: color.$secondary-color;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 60px;
+    padding: 56px 50px;
+
+    .cards {
+        background-color: color.$container-color;
+        border-radius: 10px;
+        max-width: 340px;
+        height: 340px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    h3 {
+        padding: 20px;
+    }
+}
+
