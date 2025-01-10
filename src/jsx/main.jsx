@@ -2,17 +2,19 @@ import React from "react";
 import Cards from "./Cards";
 import '../styles/index.scss';
 import data from '../appart.json';
+import Affiche from '../assets/Affiche.png';
 
 function Main() {
     return (
         <section>
             <div className="Affiche">
+                <img src={Affiche} alt="photo d'une falaise en bord de mer" />
                 <h1>Chez vous, partout et ailleurs</h1>
             </div>
             <div className="gallery">
-                {data.map((item) => (
-                    <Cards key={item.id} title={item.title} />
-                ))}
+                    {data.slice(0, 6).map((item) => (
+                        <Cards key={item.id} title={item.title} />
+                    ))}
             </div>
         </section>
     );
