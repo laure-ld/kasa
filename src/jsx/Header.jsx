@@ -12,7 +12,7 @@ function Header() {
                         <a href="/">Accueil</a>
                     </li>
                     <li className="about" key="about">
-                        <a href="/">A propos</a>
+                        <a href="./apropos">A propos</a>
                     </li>
                 </ul>
             </nav>
@@ -20,4 +20,4 @@ function Header() {
     );
 }
 
-export default Header
+export default Header;
