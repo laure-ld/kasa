@@ -1,0 +1,23 @@
+@use 'color';
+
+.error {
+    text-align: center;
+    padding-bottom: 139px;
+
+    h4 {
+        padding: 139px 0;
+    }
+
+    p {
+        font-size: 36px;
+        font-weight: 500;
+        color: color.$container-color;
+        margin: 0;
+        padding-bottom: 139px;
+    }
+
+    .return {
+        font-size: 18px;
+        border: none;
+    }
+}
