@@ -1,25 +1,24 @@
 import vite from '../assets/vite.png';
 import Vector from '../assets/Vector.png';
 import React from 'react';
-import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 
 
-function Button() {
-    const [isOpen, setIsOpen] = useState(false);
-    function handleClick() {
-        setIsOpen(!isOpen);
-    }
-
-    return (
-        <button onClick={handleClick}>
-            <img 
-                src={isOpen ? vite : Vector} 
-                alt={isOpen ? "Image ouverte" : "Image fermée"}
-            />
-        </button>
-    )
-    
+function Button({ onClick, isOpen }) {
+    return  <button onClick={onClick}>
+                <img 
+                    src={isOpen ? vite : Vector}
+                    alt={isOpen ? "Image ouverte" : "Image fermée"}>
+                </img>
+            </button>;
 }
+
+Button.propTypes = {
+    onClick: PropTypes.func.isRequired,
+    isOpen: PropTypes.bool.isRequired,
+};
+
+
 
 export default Button;
