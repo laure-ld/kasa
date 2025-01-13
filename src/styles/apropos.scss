@@ -18,37 +18,34 @@ section{
             opacity: 0.6;
         }
     }
+    .container {
+        background-color: color.$secondary-color;
 
-    .nav {
-        ul {
-            padding: 0 ;
-            li {
-                background-color: color.$secondary-color;
-                list-style-type: none;
+        .titre {
+            background-color: color.$container-color;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-                h3 {
-                    background-color: color.$container-color;
-                    border-radius: 5px;
-                    padding: 10px;
+            h3 {
+                margin: 10px 15px;
+            }
 
-                    button {
-                        padding: 0;
-                        border: none;
-                        margin: 0;
-                        background-color: transparent;
-                        position: absolute;
-                        right: 0;
-                        padding-right: 120px;
-                    }
-                }
-
-                p {
-                    padding: 0 20px 20px 20px;
-                }
+            button {
+                margin: 10px;
+                border: none;
+                background: transparent;
+                padding: 0;
             }
         }
-    }
-   
+ 
+        .text {
+            padding: 25px 20px;
 
-
+            p {
+                margin: 0;
+            }
+        }
+}
 }
