@@ -39,6 +39,10 @@ Section {
         gap: 50px 60px;
         padding: 56px 50px;
 
+        a {
+            text-decoration: none;
+        }
+
         .cards {
             background-color: color.$container-color;
             border-radius: 10px;
