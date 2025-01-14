@@ -13,7 +13,7 @@ function Accueil() {
             </div>
             <div className="gallery">
                     {data.slice(0, 6).map((item) => (
-                        <Cards key={item.id} title={item.title} />
+                        <Cards key={item.id} id={item.id} title={item.title} />
                     ))}
             </div>
         </section>
