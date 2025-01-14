@@ -6,6 +6,7 @@ import Accueil from './jsx/Accueil';
 import PropTypes from 'prop-types';
 import Footer from './jsx/Footer';
 import Error from './jsx/Error';
+import Logement from './jsx/logement';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Route path="/" element={<Navigate to="/accueil" replace />} />
       <Route path="/accueil" element={<Layout><Accueil /></Layout>} />
       <Route path="/apropos" element={<Layout><About /></Layout>} /> 
+      <Route path="/logement" element={<Layout><Logement /></Layout>} /> 
       <Route path="*" element={<Layout><Error /></Layout>} />
     </ Routes>
   )
@@ -29,7 +31,7 @@ function Layout({children}) {
   );
 }
 Layout.propTypes = {
-  children: PropTypes.node.isRequired, // `node` signifie tout contenu JSX ou textuel
+  children: PropTypes.node.isRequired,
 };
 
 export default App
