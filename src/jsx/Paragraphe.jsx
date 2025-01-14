@@ -6,9 +6,9 @@ import '../styles/apropos.scss';
 function Paragraphe({isOpen}) {
 
     return (
-        <div className='text' style={{ display: isOpen ? 'block' : 'none' }}>
-            {data.map((item, index) => (
-                <p key={index}>{item.description}</p>
+        <div className="text" style={{ display: isOpen ? "block" : "none" }}>
+            {data.map((item) => (
+                isOpen && <p key={item.id}>{item.description}</p>
             ))}
         </div>
     )

@@ -9,10 +9,13 @@ function About() {
     const [openSections, setOpenSections] = useState([false, false, false, false]);
 
     const toggleSection = (index) => {
-        setOpenSections((prev) =>
-            prev.map((isOpen, i) => (i === index ? !isOpen : isOpen))
-        );
+        if (openSections.includes(index)) {
+            setOpenSections(openSections.filter((i) => i !== index));
+        } else {
+            setOpenSections([...openSections, index]);
+        }
     };
+
     return (
         <section>
             <div className="Affiche">
@@ -22,13 +25,14 @@ function About() {
                 <div key={index} className='container'>
                     <div className='titre'>
                         <h3>{title}</h3>
-                        <Button onClick={() => toggleSection(index)} isOpen={openSections[index]} />
+                        <Button className='effect' onClick={() => toggleSection(index)} isOpen={openSections[index]} />
                     </div>
-                    <Paragraphe isOpen={openSections[index]} />
+                    <Paragraphe isOpen={openSections.includes(index)} />
                 </div>
             ))}
         </section>
     );
 }
+
 
 export default About;
