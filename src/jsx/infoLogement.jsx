@@ -1,5 +1,6 @@
 import React from "react";
 import data from '../appart.json';
+import '../styles/logement.scss'
 
 function InfoLogement() {
     const id = window.localStorage.getItem("selectedId");
@@ -9,16 +10,16 @@ function InfoLogement() {
             <div>
                 {data.map((item) => {
                     if (item.id == id) {
-                        return <h3 key={item.id} id={item.id}>
+                        return <h1 key={item.id} id={item.id}>
                                 {item.title}
-                                </h3>;   
+                                </h1>;   
                     }
                 })}
                 {data.map((item) => {
                     if (item.id == id) {
-                        return <h3 key={item.id} id={item.id}>
+                        return <h2 key={item.id} id={item.id}>
                                 {item.location}
-                                </h3>;   
+                                </h2>;   
                     }
                 })}
                 {data.map((item) => {
@@ -39,15 +40,34 @@ function InfoLogement() {
                 })}
                 {data.map((item) => {
                         if (item.id == id) {
-                            return <h3 key={item.id} id={item.id}>
-                                    {item.host.picture}
-                                    </h3>;   
+                            return <img key={item.id} id={item.id}
+                                    src={item.host.picture}/>
                         }
                 })}
                 {data.map((item) => {
                         if (item.id == id) {
                             return <h3 key={item.id} id={item.id}>
                                     {item.rating}
+                                    </h3>;   
+                        }
+                })}
+            </div>
+            <div>
+            <h1>description</h1>
+            {data.map((item) => {
+                        if (item.id == id) {
+                            return <h3 key={item.id} id={item.id}>
+                                    {item.description}
+                                    </h3>;   
+                        }
+                })}
+            </div>
+            <div>
+            <h1>Équipements</h1>
+            {data.map((item) => {
+                        if (item.id == id) {
+                            return <h3 key={item.id} id={item.id}>
+                                    {item.equipments}
                                     </h3>;   
                         }
                 })}
