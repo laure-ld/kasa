@@ -3,6 +3,7 @@ import slideL from '../assets/slideL.png';
 import slideR from '../assets/slideR.png';
 import data from '../appart.json';
 import { useState } from "react";
+import '../styles/logement.scss';
 
 function ImgLogement() {
 
@@ -24,25 +25,27 @@ function ImgLogement() {
         );
     };
     return (
-        <div>
-            <div>
-            <button className='buttonL' onClick={handlePrev}>
+        <section id="carrousel">
+            <div id="carrousel-container">
+                <div id="container-btn">
+                <button onClick={handlePrev}>
                     <img 
                         src={slideL}>
                     </img>
                 </button>
-                <img
-                    src={pictures[imgIndex]}
-                    alt={`Image ${imgIndex + 1}`}
-                    className="carousel-image"
-                />
                 <button onClick={handleNext}>
                     <img 
                         src={slideR}>
                     </img>
                 </button>
-            </div> 
-        </div>
+                </div>
+                <img
+                    src={pictures[imgIndex]}
+                    alt={`Image ${imgIndex + 1}`}
+                    className="carousel-image"
+                />
+            </div>
+        </section>
     )
 }
 
