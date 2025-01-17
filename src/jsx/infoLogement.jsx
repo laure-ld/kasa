@@ -5,93 +5,46 @@ import Button from "./button";
 
 function InfoLogement() {
     const id = window.localStorage.getItem("selectedId");
+    const logement = data.find((item) => item.id == id);
 
     return (
         <section id="container-info">
             <div className="first-container">
                 <div className="primary-info">
-                    {data.map((item) => {
-                        if (item.id == id) {
-                            return <h1 key={item.id} id={item.id}>
-                                    {item.title}
-                                    </h1>;   
-                        }
-                    })}
-                    {data.map((item) => {
-                        if (item.id == id) {
-                            return <h2 key={item.id} id={item.id}>
-                                    {item.location}
-                                    </h2>;   
-                        }
-                    })}
-                    {data.map((item) => {
-                        if (item.id === id) {
-                            return (
-                            <div key={item.id} id={item.id} className="tags">
-                                {item.tags.map((tag, index) => (
-                                <span key={index}>
-                                    {tag}
-                                </span>
-                                ))}
-                            </div>
-                            );
-                        }
-                        return null;
-                        })}
+                    <h1>{logement.title}</h1>
+                    <h2>{logement.location}</h2>
+                    <div className="tags">
+                        {logement.tags.map((tag, index) => (
+                            <span key={index}>{tag}</span>
+                        ))}
+                    </div>
                 </div>
                 <div className="host">
-                    <div className="host-identity">
-                        {data.map((item) => {
-                                if (item.id == id) {
-                                    return <h3 key={item.id} id={item.id}>
-                                            {item.host.name}
-                                            </h3>;   
-                                }
-                        })}
-                        {data.map((item) => {
-                                if (item.id == id) {
-                                    return <img key={item.id} id={item.id}
-                                            src={item.host.picture}/>
-                                }
-                        })}
-                    </div>
-                    {data.map((item) => {
-                            if (item.id == id) {
-                                return <p key={item.id} id={item.id}>
-                                        {item.rating}
-                                        </p>;   
-                            }
-                    })}
+                <div className="host-identity">
+                    <h3>{logement.host.name}</h3>
+                    <img src={logement.host.picture} alt={`Portrait de ${logement.host.name}`} />
+                </div>
+                <p>{logement.rating}</p>
                 </div>
             </div>
             <div className="secondary-info">
                 <div className="description">
-                <h4>description</h4>
-                <Button  className='effect'/>
-                {data.map((item) => {
-                            if (item.id == id) {
-                                return <span key={item.id} id={item.id} >
-                                        {item.description}
-                                        </span>;   
-                            }
-                    })}
+                    <div className="title">
+                        <h4>description</h4> 
+                        <Button/>   
+                    </div>
+                    <p>{logement.description}</p>
                 </div>
                 <div className="equipement">
-                <h4>Équipements</h4>
-                {data.map((item) => {
-                        if (item.id === id) {
-                            return (
-                            <div key={item.id} id={item.id}>
-                                {item.equipments.map((equipments, index) => (
-                                <span key={index}>
-                                    {equipments}
-                                </span>
-                                ))}
-                            </div>
-                            );
-                        }
-                        return null;
-                        })}
+                    <div className="title">
+                        <h4>Équipements</h4>
+                        <Button />
+                    </div>
+                    <ul>
+                        {logement.equipments.map((equipment, index) => (
+                            <li key={index}>{equipment}</li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </section>
