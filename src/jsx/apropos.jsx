@@ -1,12 +1,11 @@
-import paysage from '../assets/paysage.png';
-import '../styles/apropos.scss';
-import Button from './button';
-import React from "react";
-import Paragraphe from './Paragraphe';
-import { useState } from 'react';
+import React, { useState } from "react";
+import paysage from "../assets/paysage.png";
+import "../styles/apropos.scss";
+import Button from "./button";
+import Paragraphe from "./Paragraphe";
 
 function About() {
-    const [openSections, setOpenSections] = useState([false, false, false, false]);
+    const [openSections, setOpenSections] = useState([]);
 
     const toggleSection = (index) => {
         if (openSections.includes(index)) {
@@ -22,17 +21,19 @@ function About() {
                 <img src={paysage} alt="photo d'une falaise en bord de mer" />
             </div>
             {["Fiabilité", "Respect", "Service", "Sécurité"].map((title, index) => (
-                <div key={index} className='container'>
-                    <div className='titre'>
+                <div key={index} className="container">
+                    <div className="titre">
                         <h3>{title}</h3>
-                        <Button className='effect' onClick={() => toggleSection(index)} isOpen={openSections[index]} />
+                        <Button
+                            onClick={() => toggleSection(index)}
+                            isOpen={openSections.includes(index)}
+                        />
                     </div>
-                    <Paragraphe isOpen={openSections.includes(index)} />
+                    <Paragraphe index={index} isOpen={openSections.includes(index)} />
                 </div>
             ))}
         </section>
     );
 }
-
 
 export default About;
