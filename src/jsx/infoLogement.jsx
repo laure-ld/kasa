@@ -1,12 +1,26 @@
-import React from "react";
+import React, {useState} from "react";
 import data from '../appart.json';
 import '../styles/logement.scss';
 import Button from "./button";
+import RatingStars from "./start";
+import PropTypes from "prop-types";
 
 function InfoLogement() {
     const id = window.localStorage.getItem("selectedId");
     const logement = data.find((item) => item.id == id);
+    
+    const [openSections, setOpenSections] = useState({
+        description: false,
+        equipement: false,
+    });
 
+    const toggleSection = (section) => {
+        setOpenSections((prev) => ({
+            ...prev,
+            [section]: !prev[section],
+        }));
+    };
+    
     return (
         <section id="container-info">
             <div className="first-container">
@@ -21,34 +35,45 @@ function InfoLogement() {
                 </div>
                 <div className="host">
                 <div className="host-identity">
-                    <h3>{logement.host.name}</h3>
+                    <p>{logement.host.name}</p>
                     <img src={logement.host.picture} alt={`Portrait de ${logement.host.name}`} />
                 </div>
-                <p>{logement.rating}</p>
+                <RatingStars rating={logement.rating} />
                 </div>
             </div>
             <div className="secondary-info">
                 <div className="description">
                     <div className="title">
-                        <h4>description</h4> 
-                        <Button/>   
+                        <h4>description</h4>
+                        <Button
+                            onClick={() => toggleSection("description")}
+                            isOpen={openSections.description}
+                        />
                     </div>
-                    <p>{logement.description}</p>
+                    {openSections.description && <p>{logement.description}</p>}
                 </div>
                 <div className="equipement">
                     <div className="title">
                         <h4>Équipements</h4>
-                        <Button />
+                        <Button
+                            onClick={() => toggleSection("equipement")}
+                            isOpen={openSections.equipement}
+                        />
                     </div>
-                    <ul>
-                        {logement.equipments.map((equipment, index) => (
-                            <li key={index}>{equipment}</li>
-                        ))}
-                    </ul>
+                    {openSections.equipement && (
+                        <ul>
+                            {logement.equipments.map((equipment, index) => (
+                                <li key={index}>{equipment}</li>
+                            ))}
+                        </ul>
+                    )}
                 </div>
             </div>
         </section>
     )
 }
-
+InfoLogement.propTypes = {
+    index: PropTypes.number.isRequired,
+    isOpen: PropTypes.bool.isRequired,
+};
 export default InfoLogement;
