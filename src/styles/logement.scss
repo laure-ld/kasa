@@ -55,6 +55,8 @@
 
         .host-identity {
             display: flex;
+            align-items: center;
+            justify-content: space-evenly;
         }
     }
     
@@ -75,38 +77,88 @@
 }
 
 .host {
-    h3 {
-        color: color.$container-color;
-        font-size: 18px;
-        font-weight: 500;
-    }
     img {
         border-radius: 90px;
         height: 64px;
         object-fit: cover;
     }
+    p {
+        color: color.$container-color;
+        width: 50%;
+        text-align: right;
+    }
 }
 
 .secondary-info {
     display: flex;
-    h4 {
-        font-size: 18px;
-        font-weight: 700;
+    justify-content: space-between;
+    gap: 76px;
+
+    .description, .equipement {
+        width: 50%;
+        margin: 0;
+        
+
+        .title {
+            display: flex;
+            background-color: color.$container-color;
+            border-radius: 5px;
+            justify-content: space-between;
+            padding: 10px;
+    
+            Button {
+                border: none;
+                background: transparent;
+            }
+            h4 {
+                font-size: 18px;
+                font-weight: 700;
+                color: white;
+            }}
+
+            p, ul{
+                padding: 15px;
+                margin: 0;
+                background-color: color.$secondary-color;
+                border-radius: 5px;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 25.67px;
+                height: 60%;
+            }
+            li {
+                list-style-type: none;
+            }
+        
+    }
+
+    .title {
+        display: flex;
         background-color: color.$container-color;
-        color: white;
         border-radius: 10px;
-        gap: 76px ;
-    }
+        justify-content: space-between;
+        padding: 10px;
 
-    span {
-        background-color: color.$secondary-color;
+        Button {
+            border: none;
+            background: transparent;
+        }
     }
+}
 
-    .description {
-        width: 50%;
-    }
+.rating-stars {
+    display: flex;
+    gap: 5px; 
+}
 
-    .equipement {
-        width: 50%;
-    }
+.star {
+    font-size: 24px; 
+}
+
+.svg-inline--fa fa-star  {
+    color: color.$container-color
+}
+
+.star.empty {
+    color: color.$color-emptyStar;
 }
