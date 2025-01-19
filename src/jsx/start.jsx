@@ -1,7 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as starFilled } from "@fortawesome/free-solid-svg-icons";
-import { faStar as starEmpty } from "@fortawesome/free-regular-svg-icons";
 import PropTypes from  "prop-types";
 import '../styles/logement.scss';
 
@@ -11,9 +10,9 @@ function RatingStars({ rating }) {
         .fill()
         .map((_, index) =>
             index < rating ? (
-                <FontAwesomeIcon key={index} icon={starFilled} alt="Étoile pleine" />
+                <FontAwesomeIcon className="starFilled" key={index} icon={starFilled} alt="Étoile pleine" />
             ) : (
-                <FontAwesomeIcon key={index} icon={starEmpty} alt="Étoile vide" />
+                <FontAwesomeIcon className="starEmpty" key={index} icon={starFilled} alt="Étoile vide" />
             )
         );
 
