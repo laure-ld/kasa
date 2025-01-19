@@ -148,17 +148,13 @@
 
 .rating-stars {
     display: flex;
-    gap: 5px; 
-}
+    gap: 5px;
 
-.star {
-    font-size: 24px; 
-}
+    .starFilled {
+        color: color.$container-color;
+    }
 
-.svg-inline--fa fa-star  {
-    color: color.$container-color
-}
-
-.star.empty {
-    color: color.$color-emptyStar;
+    .starEmpty {
+        color: color.$color-emptyStar;
+    }
 }
