@@ -7,7 +7,6 @@ function Cards({title, id}) {
 
     const handleClick = () => {
         window.localStorage.setItem("selectedId", id);
-        console.log(`ID stocké : ${id}`);
     };
 
     return (
