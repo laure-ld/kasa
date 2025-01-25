@@ -27,7 +27,6 @@
     }
 }
 
-
 //
 
 .first-container {
@@ -57,6 +56,7 @@
             display: flex;
             align-items: center;
             justify-content: space-evenly;
+            gap: 10px;
         }
     }
     
@@ -68,7 +68,7 @@
 
     span {
         background-color: color.$container-color;
-        padding: 3px 36px;
+        padding: 5px 36px;
         border-radius: 10px;
         color: #ffff;
         font-weight: 700;
@@ -97,7 +97,6 @@
     .description, .equipement {
         width: 50%;
         margin: 0;
-        
 
         .title {
             display: flex;
@@ -117,7 +116,6 @@
             }}
 
             p, ul{
-                padding: 15px;
                 margin: 0;
                 background-color: color.$secondary-color;
                 border-radius: 5px;
@@ -125,6 +123,16 @@
                 font-weight: 400;
                 line-height: 25.67px;
                 height: 60%;
+            }
+            .collapse {
+                overflow: hidden;
+                transform: scaleY(0);              
+                transform-origin: top;  
+                transition: transform 0.5s linear, padding 0.1s linear;    
+            }
+            .collapse.open {
+                transform: scaleY(1); 
+                padding: 15px;
             }
             li {
                 list-style-type: none;
@@ -149,6 +157,8 @@
 .rating-stars {
     display: flex;
     gap: 5px;
+    font-size: 24px;
+    padding-top: 20px;
 
     .starFilled {
         color: color.$container-color;
@@ -156,5 +166,30 @@
 
     .starEmpty {
         color: color.$color-emptyStar;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #carrousel{
+        margin: 27px 0;
+        #container-btn {
+            width: 95%;
+            button img{
+                width: 12px;
+            }
+        }
+    }
+    .first-container {
+        flex-direction: column;
+        .primary-info {
+            width: 100%;
+            h1 {
+                font-size: 18px;
+        }}
+
+        .tags span {
+            padding: 7px 15px;
+            font-size: 10px;
+        }
     }
 }
