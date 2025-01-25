@@ -47,3 +47,9 @@ body {
         line-height: 25.67px;
     }
 }
+
+@media screen and (max-width: 375px) {
+    body {
+        padding: 0;
+    }
+}

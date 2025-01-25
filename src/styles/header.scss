@@ -24,3 +24,16 @@
     text-decoration: none;
     }
 }
+
+@media screen and (max-width: 375px) {
+    .header {
+        .logo {
+            width: 145px;
+            height: 47px;
+        }
+
+        nav ul {
+            gap: 26px;
+        }
+    }
+}
