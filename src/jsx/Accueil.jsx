@@ -17,6 +17,7 @@ function Accueil() {
             navigate("/error");
         }
     }, [id, logement, navigate]);
+    
     return (
         <section>
             <div className="Affiche">

@@ -5,7 +5,7 @@ import "../styles/apropos.scss";
 
 function Paragraphe({ index, isOpen }) {
     return (
-        <div className="text" style={{ display: isOpen ? "block" : "none" }}>
+        <div className={`collapse-section ${isOpen ? "open" : ""}`}>
             <p>{data[index]?.description}</p>
         </div>
     );
