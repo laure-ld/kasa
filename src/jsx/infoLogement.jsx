@@ -50,8 +50,10 @@ function InfoLogement() {
                             isOpen={openSections.description}
                         />
                     </div>
-                    {openSections.description && <p>{logement.description}</p>}
-                </div>
+                    <p className={`collapse ${openSections.description ? "open" : ""}`}>
+                        {logement.description}
+                    </p> 
+            </div>
                 <div className="equipement">
                     <div className="title">
                         <h4>Équipements</h4>
@@ -60,13 +62,11 @@ function InfoLogement() {
                             isOpen={openSections.equipement}
                         />
                     </div>
-                    {openSections.equipement && (
-                        <ul>
+                        <ul className={`collapse ${openSections.equipement ? "open" : ""}`}>
                             {logement.equipments.map((equipment, index) => (
                                 <li key={index}>{equipment}</li>
                             ))}
                         </ul>
-                    )}
                 </div>
             </div>
         </section>
