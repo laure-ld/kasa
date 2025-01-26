@@ -14,6 +14,7 @@ body {
 
         @media screen and (max-width: 375px) {
             font-size: 24px;
+            text-align: center;
         }
     }
 
@@ -31,6 +32,10 @@ body {
         color: color.$primary-color;
         font-weight: 700;
         font-size: 18px;
+
+        @media screen and (max-width: 375px) {
+            font-size: 13px;
+        }
     }
 
     h4 {
@@ -39,6 +44,10 @@ body {
         margin: 0;
         color: color.$container-color;
         text-align: center;
+
+        @media screen and (max-width: 375px) {
+            font-size: 96px;
+        }
     }
 
     p {

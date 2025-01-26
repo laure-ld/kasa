@@ -1,11 +1,22 @@
 @use 'color';
 
+$padding-desktop: 139px;
+$padding-mobile: 113px;
+
 .error {
     text-align: center;
-    padding-bottom: 139px;
+    padding-bottom: $padding-desktop;
+
+    @media screen and (max-width: 375px) {
+        padding-bottom: $padding-mobile;
+    }
 
     h4 {
-        padding: 139px 0;
+        padding: $padding-desktop 0;
+
+        @media screen and (max-width: 375px) {
+            padding: $padding-mobile 0;   
+        }
     }
 
     p {
@@ -13,11 +24,20 @@
         font-weight: 500;
         color: color.$container-color;
         margin: 0;
-        padding-bottom: 139px;
+        padding-bottom: $padding-desktop;
+
+        @media screen and (max-width: 375px) {
+            font-size: 18px;
+            padding-bottom: $padding-mobile;
+        }
     }
 
     .return {
         font-size: 18px;
         border: none;
+
+        @media screen and (max-width: 375px) {
+            font-size: 14px;
+        }
     }
 }

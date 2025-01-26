@@ -52,6 +52,13 @@
         flex-direction: column;
         align-items: flex-end;
 
+        @media screen and (max-width: 375px) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            width: auto;
+            align-items: flex-start;
+        }
+
         .host-identity {
             display: flex;
             align-items: center;
@@ -81,11 +88,22 @@
         border-radius: 90px;
         height: 64px;
         object-fit: cover;
+
+        @media screen and (max-width: 375px) {
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+        }
     }
     p {
         color: color.$container-color;
         width: 50%;
         text-align: right;
+
+        @media screen and (max-width: 375px) {
+            font-size: 13px;
+            line-height: normal;
+        }
     }
 }
 
@@ -94,9 +112,18 @@
     justify-content: space-between;
     gap: 76px;
 
+    @media screen and (max-width: 375px) {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .description, .equipement {
         width: 50%;
         margin: 0;
+
+        @media screen and (max-width: 375px) {
+            width: auto;
+        }
 
         .title {
             display: flex;
@@ -113,6 +140,10 @@
                 font-size: 18px;
                 font-weight: 700;
                 color: white;
+
+                @media screen and (max-width: 375px) {
+                    font-size: 13px;
+                }
             }}
 
             p, ul{
@@ -123,15 +154,20 @@
                 font-weight: 400;
                 line-height: 25.67px;
                 height: 60%;
+
+                @media screen and (max-width: 375px) {
+                    font-size: 13px;
+                }
             }
             .collapse {
                 overflow: hidden;
-                transform: scaleY(0);              
-                transform-origin: top;  
-                transition: transform 0.5s linear, padding 0.1s linear;    
+                max-height: 0;
+                opacity: 0;
+                transition: max-height 0.5s linear, padding 0.3s linear,  opacity 0.1s linear;    
             }
             .collapse.open {
-                transform: scaleY(1); 
+                max-height: 500px; 
+                opacity: 1;
                 padding: 15px;
             }
             li {
@@ -160,6 +196,10 @@
     font-size: 24px;
     padding-top: 20px;
 
+    @media screen and (max-width: 375px) {
+        font-size: 18px;
+    }
+
     .starFilled {
         color: color.$container-color;
     }
@@ -185,6 +225,7 @@
             width: 100%;
             h1 {
                 font-size: 18px;
+                display: flex;
         }}
 
         .tags span {
