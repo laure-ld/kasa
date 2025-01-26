@@ -18,12 +18,16 @@
     gap: 57px;
     }
     
-    nav ul li a {
+    nav ul li a{
     display: inline-block;
     margin-right: 15px;
     text-decoration: none;
     }
-}
+    
+    li a.active {
+        border-bottom: 1px solid black;
+      }
+    }
 
 @media screen and (max-width: 375px) {
     .header {
