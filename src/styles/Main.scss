@@ -8,6 +8,10 @@ Section {
     gap: 43px;
 
     @media screen and (max-width: 375px) {
+        gap: 40px;
+    }
+
+    @media screen and (max-width: 375px) {
         gap: 20px;
     }
 
@@ -60,6 +64,12 @@ Section {
             h3 {
                 padding: 20px;
             }
+        }
+        @media screen and (max-width: 900px) {
+            grid-template-columns: 1fr 1fr;
+            padding: 10px;
+            gap: 20px;
+            background: none;
         }
 
         @media screen and (max-width: 375px) {

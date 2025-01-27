@@ -44,6 +44,7 @@
             font-size: 36px;
             font-weight: 500;
             margin: 0;
+            text-align: left;
         }
     }
     .host {
@@ -153,7 +154,6 @@
                 font-size: 18px;
                 font-weight: 400;
                 line-height: 25.67px;
-                height: 60%;
 
                 @media screen and (max-width: 375px) {
                     font-size: 13px;
@@ -166,7 +166,7 @@
                 transition: max-height 0.5s linear, padding 0.3s linear,  opacity 0.1s linear;    
             }
             .collapse.open {
-                max-height: 500px; 
+                max-height: 800px; 
                 opacity: 1;
                 padding: 15px;
             }
@@ -208,7 +208,20 @@
         color: color.$color-emptyStar;
     }
 }
-
+@media screen and (max-width: 900px) {
+    #carrousel{
+        margin: 27px 0;
+        #container-btn {
+            width: 98%;
+            button img{
+                width: 25px;
+            }
+        }
+    }
+    .tags span {
+        padding: 10px;
+    }
+}
 @media screen and (max-width: 375px) {
     #carrousel{
         margin: 27px 0;

@@ -12,6 +12,11 @@ body {
         font-weight: 700;
         font-size: 48px;
 
+        @media screen and (min-width: 375px) {
+            font-size: 35px;
+            text-align: center;
+        }
+
         @media screen and (max-width: 375px) {
             font-size: 24px;
             text-align: center;
@@ -61,7 +66,7 @@ body {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 900px) {
     body {
         padding: 0;
     }
