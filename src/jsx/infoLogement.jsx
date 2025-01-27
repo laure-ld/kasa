@@ -3,7 +3,6 @@ import data from '../appart.json';
 import '../styles/logement.scss';
 import Button from "./button";
 import RatingStars from "./start";
-import PropTypes from "prop-types";
 
 function InfoLogement() {
     const id = window.localStorage.getItem("selectedId");
@@ -72,8 +71,4 @@ function InfoLogement() {
         </section>
     )
 }
-InfoLogement.propTypes = {
-    index: PropTypes.number.isRequired,
-    isOpen: PropTypes.bool.isRequired,
-};
 export default InfoLogement;

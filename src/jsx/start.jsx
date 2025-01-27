@@ -5,7 +5,6 @@ import PropTypes from  "prop-types";
 import '../styles/logement.scss';
 
 function RatingStars({ rating }) {
-    // Crée un tableau de 5 étoiles (pleines ou vides)
     const stars = Array(5)
         .fill()
         .map((_, index) =>
@@ -20,7 +19,7 @@ function RatingStars({ rating }) {
 }
 
 RatingStars.propTypes = {
-    rating: PropTypes.number.isRequired,
+    rating: PropTypes.string.isRequired,
 };
 
 export default RatingStars;
