@@ -27,23 +27,27 @@ function ImgLogement() {
     return (
         <section id="carrousel">
             <div id="carrousel-container">
-                <div id="container-btn">
+            {pictures.length > 1 && (
+            <div id="container-btn">
                 <button onClick={handlePrev}>
                     <img 
-                        src={slideL}>
-                    </img>
+                        src={slideL}
+                        alt="Précédent"
+                    />
                 </button>
                 <button onClick={handleNext}>
                     <img 
-                        src={slideR}>
-                    </img>
+                        src={slideR}
+                        alt="Suivant"
+                    />
                 </button>
-                </div>
-                <img
-                    src={pictures[imgIndex]}
-                    alt={`Image ${imgIndex + 1}`}
-                    className="carousel-image"
-                />
+            </div>
+            )}
+            <img
+                src={pictures[imgIndex]}
+                alt={`Image ${imgIndex + 1}`}
+                className="carousel-image"
+            />
             </div>
         </section>
     )
