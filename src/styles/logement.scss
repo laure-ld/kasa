@@ -1,5 +1,9 @@
 @use 'color';
 
+.logement {
+    margin: 27px 0 ;
+}
+
 #carrousel-container {
     display: flex;
     flex-direction: column;
@@ -117,6 +121,7 @@
         flex-direction: column;
         gap: 10px;
     }
+    
 
     .description, .equipement {
         width: 50%;
