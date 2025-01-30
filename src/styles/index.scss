@@ -50,7 +50,7 @@ body {
         color: color.$container-color;
         text-align: center;
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 426px) {
             font-size: 96px;
         }
     }

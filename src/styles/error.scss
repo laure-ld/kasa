@@ -26,7 +26,7 @@ $padding-mobile: 113px;
         margin: 0;
         padding-bottom: $padding-desktop;
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 426px) {
             font-size: 18px;
             padding-bottom: $padding-mobile;
         }
