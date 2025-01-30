@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import paysage from "../assets/paysage.png";
+import paysage from "../assets/landscapephoto.png";
 import "../styles/apropos.scss";
 import Button from "./button";
 import Paragraphe from "./Paragraphe";

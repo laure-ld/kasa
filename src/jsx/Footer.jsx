@@ -1,7 +1,7 @@
 import React from "react";
 import '../styles/Footer.scss';
-import footer from '../assets/FooterDesktop.png';
-import footerPhone from '../assets/FooterPhone.png';
+import footer from '../assets/footerdesktop.png';
+import footerPhone from '../assets/footerphone.png';
 
 function Footer() {
     return (

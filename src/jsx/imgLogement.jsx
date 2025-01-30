@@ -1,6 +1,6 @@
 import React from "react";
-import slideL from '../assets/slideL.png';
-import slideR from '../assets/slideR.png';
+import slideL from '../assets/left_arrow.png';
+import slideR from '../assets/right_arrow.png';
 import data from '../appart.json';
 import { useState } from "react";
 import '../styles/logement.scss';

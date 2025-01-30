@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import Cards from "./Cards";
 import '../styles/index.scss';
 import data from '../appart.json';
-import Affiche from '../assets/Affiche.png';
+import Affiche from '../assets/landscapephoto2.png';
 import { useNavigate } from "react-router";
 
 
