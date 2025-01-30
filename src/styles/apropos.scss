@@ -21,6 +21,10 @@ section{
     .container {
         background-color: color.$secondary-color;
 
+        @media screen and (max-width: 375px) {
+            gap: 20px;
+        }
+
         .titre {
             background-color: color.$container-color;
             border-radius: 5px;

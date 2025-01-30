@@ -7,6 +7,24 @@ footer {
     background-color: color.$footer-background;
     width: 100%;
     img {
-        width: 100%
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .footer-desktop {
+        display: none;
+    }
+    .footer-mobile {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 385px) {
+    .footer-desktop {
+        display: block;
+    }
+    .footer-mobile {
+        display: none;
     }
 }
