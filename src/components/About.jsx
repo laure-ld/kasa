@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import paysage from "../assets/landscapephoto.png";
 import "../styles/apropos.scss";
-import Button from "./button";
+import Button from "./ButtonCollapse";
 import Paragraphe from "./Paragraphe";
 
 function About() {

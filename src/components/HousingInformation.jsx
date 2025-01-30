@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import data from '../appart.json';
 import '../styles/logement.scss';
-import Button from "./button";
-import RatingStars from "./start";
+import Button from "./ButtonCollapse";
+import RatingStars from "./Rating";
 
 function InfoLogement() {
     const id = window.localStorage.getItem("selectedId");
