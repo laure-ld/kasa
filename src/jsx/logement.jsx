@@ -4,7 +4,7 @@ import InfoLogement from "./infoLogement";
 
 function Logement() {
     return (
-        <div>
+        <div className="logement">
             <ImgLogement />
             <InfoLogement />
         </div>
