@@ -1,23 +1,11 @@
-import React, {useEffect} from "react";
+import React from "react";
 import Cards from "./Cards";
 import '../styles/index.scss';
 import data from '../appart.json';
 import Affiche from '../assets/landscapephoto2.png';
-import { useNavigate } from "react-router";
 
 
 function Accueil() {
-    const id = window.localStorage.getItem("selectedId");
-    const navigate = useNavigate();
-    const logement = data.find((item) => item.id === id);
-
-    useEffect(() => {
-        if (id && !logement) {
-            console.warn("ID invalide, redirection vers /error");
-            navigate("/error");
-        }
-    }, [id, logement, navigate]);
-    
     return (
         <section>
             <div className="Affiche">

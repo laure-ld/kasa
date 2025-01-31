@@ -3,9 +3,10 @@ import data from '../appart.json';
 import '../styles/logement.scss';
 import Button from "./ButtonCollapse";
 import RatingStars from "./Rating";
+import { useParams } from "react-router-dom";
 
 function InfoLogement() {
-    const id = window.localStorage.getItem("selectedId");
+    const { id } = useParams();
     const logement = data.find((item) => item.id == id);
     
     const [openSections, setOpenSections] = useState({

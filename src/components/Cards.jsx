@@ -4,13 +4,8 @@ import '../styles/Main.scss';
 
 
 function Cards({title, id}) {
-
-    const handleClick = () => {
-        window.localStorage.setItem("selectedId", id);
-    };
-
     return (
-        <a href="/logement" onClick={handleClick}>
+        <a href={`/logement/${id}`}>
             <div className="cards">
                 <h3 className="cards-title">{title}</h3>
             </div>

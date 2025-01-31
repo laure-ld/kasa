@@ -4,11 +4,11 @@ import slideR from '../assets/right_arrow.png';
 import data from '../appart.json';
 import { useState } from "react";
 import '../styles/logement.scss';
+import { useParams } from "react-router-dom";
 
 function ImgLogement() {
 
-    const  id = window.localStorage.getItem("selectedId");
-
+    const { id } = useParams();
     const logement = data.find((item) => item.id == id);
     const pictures = logement.pictures;
 
